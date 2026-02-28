@@ -1,0 +1,40 @@
+{
+  "id": "callout_box",
+  "type": "SharedSlice",
+  "name": "CalloutBox",
+  "description": "Tip, warning, or info highlight box",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "--",
+      "version": "initial",
+      "description": "Default",
+      "primary": {
+        "type": {
+          "type": "Select",
+          "config": {
+            "label": "Type",
+            "options": ["tip", "warning", "info"],
+            "default_value": "tip"
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "e.g. Pro Tip"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

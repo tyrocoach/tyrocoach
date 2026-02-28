@@ -1,0 +1,40 @@
+{
+  "id": "drill_diagram",
+  "type": "SharedSlice",
+  "name": "DrillDiagram",
+  "description": "Drill diagram image with name and description",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "--",
+      "version": "initial",
+      "description": "Default",
+      "primary": {
+        "drill_name": {
+          "type": "Text",
+          "config": {
+            "label": "Drill Name",
+            "placeholder": "e.g. Triangle Passing Drill"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Diagram Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "multi": "paragraph,strong,em,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

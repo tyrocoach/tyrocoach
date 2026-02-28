@@ -1,0 +1,26 @@
+{
+  "id": "ad_placement",
+  "type": "SharedSlice",
+  "name": "AdPlacement",
+  "description": "Marks where an ad unit renders in an article",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "--",
+      "version": "initial",
+      "description": "Default",
+      "primary": {
+        "ad_slot": {
+          "type": "Select",
+          "config": {
+            "label": "Ad Slot",
+            "options": ["leaderboard", "rectangle", "skyscraper"],
+            "default_value": "rectangle"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

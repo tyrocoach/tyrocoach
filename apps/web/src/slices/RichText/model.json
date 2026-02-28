@@ -2,21 +2,20 @@
   "id": "rich_text",
   "type": "SharedSlice",
   "name": "RichText",
-  "description": "Standard article text content",
+  "description": "Standard rich text content block",
   "variations": [
     {
       "id": "default",
       "name": "Default",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
+      "docURL": "--",
+      "version": "initial",
       "description": "Default",
       "primary": {
         "content": {
           "type": "StructuredText",
           "config": {
             "label": "Content",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading2,heading3,heading4,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,heading2,heading3,heading4,strong,em,hyperlink,image,embed,list-item,o-list-item"
           }
         }
       },

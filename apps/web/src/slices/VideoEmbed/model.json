@@ -1,0 +1,32 @@
+{
+  "id": "video_embed",
+  "type": "SharedSlice",
+  "name": "VideoEmbed",
+  "description": "YouTube or Vimeo video embed with caption",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "--",
+      "version": "initial",
+      "description": "Default",
+      "primary": {
+        "embed_url": {
+          "type": "Text",
+          "config": {
+            "label": "Embed URL",
+            "placeholder": "https://www.youtube.com/watch?v=..."
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Caption",
+            "placeholder": "Optional caption"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

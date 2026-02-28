@@ -1,0 +1,47 @@
+{
+  "id": "printable_download",
+  "type": "SharedSlice",
+  "name": "PrintableDownload",
+  "description": "Download button for a printable PDF resource",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "--",
+      "version": "initial",
+      "description": "Default",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "e.g. U10 Drill Sheet"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Brief description of the printable"
+          }
+        },
+        "file": {
+          "type": "Link",
+          "config": {
+            "label": "PDF File",
+            "select": "media",
+            "allowTargetBlank": true
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Download PDF"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
