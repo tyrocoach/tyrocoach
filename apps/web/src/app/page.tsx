@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createClient } from '@/prismicio'
 import ArticleCard from '@/components/ArticleCard'
+import type { ArticleDocument } from '@/prismicio-types'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600
@@ -15,7 +16,7 @@ export default async function HomePage() {
   const client = createClient()
 
   const articles = await client
-    .getAllByType('article', {
+    .getAllByType<ArticleDocument>('article', {
       limit: 6,
       orderings: [{ field: 'my.article.published_date', direction: 'desc' }],
       fetchLinks: ['sport.name', 'sport.slug', 'age_group.label'],

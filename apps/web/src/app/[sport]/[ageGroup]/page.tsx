@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/prismicio'
 import ArticleCard from '@/components/ArticleCard'
+import type { ArticleDocument } from '@/prismicio-types'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600
@@ -51,7 +52,7 @@ export default async function AgeGroupPage({ params }: Props) {
     client.getByUID('sport', sportSlug).catch(() => null),
     client.getByUID('age_group', ageGroupSlug).catch(() => null),
     client
-      .getAllByType('article', {
+      .getAllByType<ArticleDocument>('article', {
         filters: [
           filter.at('my.article.sport', sportSlug),
           filter.at('my.article.age_group', ageGroupSlug),

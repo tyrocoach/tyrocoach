@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { filter } from '@prismicio/client'
 import { createClient } from '@/prismicio'
 import ArticleCard from '@/components/ArticleCard'
+import type { ArticleDocument } from '@/prismicio-types'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600
@@ -44,7 +45,7 @@ export default async function SportHubPage({ params }: Props) {
       })
       .catch(() => []),
     client
-      .getAllByType('article', {
+      .getAllByType<ArticleDocument>('article', {
         filters: [filter.at('my.article.sport', sportSlug)],
         orderings: [{ field: 'my.article.published_date', direction: 'desc' }],
         limit: 9,
