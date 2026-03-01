@@ -6,10 +6,10 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          green: '#2D6A4F',
-          lime: '#52B788',
-          yellow: '#FFD166',
-          dark: '#1B1B2F',
+          green: '#1D428A',  // Leeds Navy Blue
+          lime: '#5B9BD5',   // Sky Blue (accent)
+          yellow: '#FFCD00', // Leeds Yellow
+          dark: '#0D1B3E',   // Deep Navy
         },
       },
       fontFamily: {
