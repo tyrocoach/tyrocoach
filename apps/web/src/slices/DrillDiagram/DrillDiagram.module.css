@@ -1,0 +1,57 @@
+.section {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  background-color: #f9fafb;
+}
+
+.header {
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid #e5e7eb;
+  background-color: var(--color-medium);
+}
+
+.headerTitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: #fff;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.description {
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: #374151;
+}
+
+.description p {
+  margin-bottom: var(--space-3);
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.description ul,
+.description ol {
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+.description li {
+  margin-bottom: var(--space-1);
+}

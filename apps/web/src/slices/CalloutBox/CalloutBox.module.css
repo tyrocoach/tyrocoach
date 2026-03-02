@@ -1,0 +1,91 @@
+.section {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+/* Base wrapper — variant classes extend this */
+.wrapper {
+  border-left: 4px solid;
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+}
+
+.tip {
+  border-color: var(--color-light);
+  background-color: color-mix(in srgb, var(--color-light) 10%, transparent);
+}
+
+.warning {
+  border-color: #d97706;
+  background-color: #fffbeb;
+}
+
+.info {
+  border-color: #60a5fa;
+  background-color: #eff6ff;
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.icon {
+  font-size: var(--text-xl);
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+}
+
+.label {
+  margin-bottom: var(--space-1);
+  font-weight: var(--font-semibold);
+}
+
+.labelTip {
+  color: var(--color-medium);
+}
+
+.labelWarning {
+  color: #92400e;
+}
+
+.labelInfo {
+  color: #1d4ed8;
+}
+
+/* Prose styles for callout body text */
+.prose {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.prose p {
+  margin-bottom: var(--space-2);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.prose li {
+  margin-bottom: var(--space-1);
+}
+
+.prose a {
+  color: var(--color-medium);
+}
+
+.prose strong {
+  font-weight: var(--font-semibold);
+}

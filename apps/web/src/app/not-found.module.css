@@ -1,0 +1,25 @@
+.page {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+  text-align: center;
+}
+
+.emoji {
+  font-size: var(--text-6xl);
+}
+
+.heading {
+  margin-top: var(--space-6);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+}
+
+.subtext {
+  margin-top: var(--space-3);
+  color: #6b7280;
+}
+
+.cta {
+  margin-top: var(--space-8);
+}

@@ -1,16 +1,19 @@
 import Link from 'next/link'
+import styles from './not-found.module.css'
 
 export default function NotFound() {
   return (
-    <div className="container-narrow py-24 text-center">
-      <p className="text-6xl">⚽</p>
-      <h1 className="mt-6 text-3xl font-bold text-brand-dark">Page Not Found</h1>
-      <p className="mt-3 text-gray-500">
+    <div className={['container-narrow', styles.page].join(' ')}>
+      <p className={styles.emoji}>⚽</p>
+      <h1 className={styles.heading}>Page Not Found</h1>
+      <p className={styles.subtext}>
         Looks like this page took a wrong turn. Let&apos;s get you back on the field.
       </p>
-      <Link href="/" className="btn-primary mt-8 inline-block">
-        ← Back to Home
-      </Link>
+      <div className={styles.cta}>
+        <Link href="/" className="btn-primary">
+          ← Back to Home
+        </Link>
+      </div>
     </div>
   )
 }
