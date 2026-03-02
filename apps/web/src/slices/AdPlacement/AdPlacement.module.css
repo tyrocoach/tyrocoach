@@ -1,0 +1,39 @@
+.section {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+/* Dev-mode placeholder */
+.devPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  border: 2px dashed #d1d5db;
+  border-radius: var(--radius-lg);
+  background-color: #f9fafb;
+  font-size: var(--text-sm);
+  color: #9ca3af;
+}
+
+/* Production ad wrapper */
+.adWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ad size variants */
+.leaderboard {
+  height: 90px;
+  max-width: 728px;
+}
+
+.rectangle {
+  height: 280px;
+  max-width: 336px;
+}
+
+.skyscraper {
+  height: 600px;
+  max-width: 160px;
+}

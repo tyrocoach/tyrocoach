@@ -1,0 +1,41 @@
+.section {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-xl);
+  background-color: color-mix(in srgb, var(--color-light) 10%, transparent);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: var(--text-2xl);
+  background-color: var(--color-medium);
+  border-radius: var(--radius-full);
+}
+
+.body {
+  flex: 1;
+}
+
+.title {
+  font-weight: var(--font-semibold);
+  color: var(--color-dark);
+}
+
+.description {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: #4b5563;
+}

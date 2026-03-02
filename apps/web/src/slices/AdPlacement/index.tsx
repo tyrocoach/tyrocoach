@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import type { AdPlacementSlice } from '@/prismicio-types'
 import type { SliceComponentProps } from '@prismicio/react'
+import styles from './AdPlacement.module.css'
 
 type Props = SliceComponentProps<AdPlacementSlice>
 
@@ -13,9 +14,9 @@ declare global {
 }
 
 const adSizes = {
-  leaderboard: { width: 728, height: 90, className: 'h-[90px] max-w-[728px]' },
-  rectangle: { width: 336, height: 280, className: 'h-[280px] max-w-[336px]' },
-  skyscraper: { width: 160, height: 600, className: 'h-[600px] max-w-[160px]' },
+  leaderboard: { width: 728, height: 90, sizeClass: styles.leaderboard },
+  rectangle: { width: 336, height: 280, sizeClass: styles.rectangle },
+  skyscraper: { width: 160, height: 600, sizeClass: styles.skyscraper },
 } as const
 
 export default function AdPlacement({ slice }: Props) {
@@ -35,10 +36,8 @@ export default function AdPlacement({ slice }: Props) {
 
   if (process.env.NODE_ENV === 'development') {
     return (
-      <section className="container-narrow py-4">
-        <div
-          className={`mx-auto flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 text-sm text-gray-400 ${size.className}`}
-        >
+      <section className={['container-narrow', styles.section].join(' ')}>
+        <div className={[styles.devPlaceholder, size.sizeClass].join(' ')}>
           Ad Slot — {slot}
         </div>
       </section>
@@ -46,11 +45,11 @@ export default function AdPlacement({ slice }: Props) {
   }
 
   return (
-    <section className="container-narrow py-4">
-      <div className="mx-auto flex justify-center">
+    <section className={['container-narrow', styles.section].join(' ')}>
+      <div className={styles.adWrapper}>
         <ins
           ref={adRef}
-          className={`adsbygoogle ${size.className}`}
+          className={['adsbygoogle', size.sizeClass].join(' ')}
           style={{ display: 'block' }}
           data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}
           data-ad-slot={process.env[`NEXT_PUBLIC_ADSENSE_SLOT_${slot.toUpperCase()}`]}

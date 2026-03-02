@@ -1,5 +1,6 @@
 import type { VideoEmbedSlice } from '@/prismicio-types'
 import type { SliceComponentProps } from '@prismicio/react'
+import styles from './VideoEmbed.module.css'
 
 type Props = SliceComponentProps<VideoEmbedSlice>
 
@@ -23,19 +24,19 @@ export default function VideoEmbed({ slice }: Props) {
   if (!embedUrl) return null
 
   return (
-    <section className="container-narrow py-6">
-      <div className="overflow-hidden rounded-xl shadow-md">
-        <div className="relative aspect-video">
+    <section className={['container-narrow', styles.section].join(' ')}>
+      <div className={styles.wrapper}>
+        <div className={styles.aspectBox}>
           <iframe
             src={embedUrl}
             title={slice.primary.caption ?? 'Video'}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="absolute inset-0 h-full w-full border-0"
+            className={styles.iframe}
           />
         </div>
         {slice.primary.caption && (
-          <p className="bg-gray-50 px-4 py-2 text-sm text-gray-600">{slice.primary.caption}</p>
+          <p className={styles.caption}>{slice.primary.caption}</p>
         )}
       </div>
     </section>
