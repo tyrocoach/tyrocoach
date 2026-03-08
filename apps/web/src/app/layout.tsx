@@ -6,7 +6,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <SiteHeader />
-        {children}
+        <article className="page-layout">
+          <main className="content-well">{children}</main>
+          <aside className="ad-rail">{/* Ad placements */}</aside>
+        </article>
       </body>
     </html>
   )
