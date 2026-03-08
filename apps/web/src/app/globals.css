@@ -230,6 +230,37 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
+/* ==========================================================================
+   Page Layout — content well + ad rail
+   ========================================================================== */
+
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  max-width: calc(600px + 300px + var(--space-3) * 3); /* wells + rail + padding + gap */
+  margin-inline: auto;
+}
+
+.content-well {
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+}
+
+.ad-rail {
+  display: none;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .ad-rail {
+    display: block;
+  }
+}
+
 /* Tag / pill badge */
 .tag {
   display: inline-block;
